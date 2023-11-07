@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Check</title>
+</head>
+
+<body>
+
+    <label for="temperature">Anna lämpötila:</label>
+    </br>
+    <input type="number" id="temperature" placeholder="Esimerkiksi: -25">
+    </br>
+    <button onclick="checkTemperature()">Tarkista Sää</button>
+
+    <p id="weatherResult"></p>
+
+    <script>
+        function checkTemperature() {
+            const temp = parseInt(document.getElementById('temperature').value);
+            let result;
+
+            if (temp <= -40) {
+                result = "Erittäin kylmää";
+            } else if (temp > -40 && temp <= -20) {
+                result = "Melko kylmää";
+            } else if (temp > -19 && temp <= -5) {
+                result = "Normaali talvipäivä";
+            } else if (temp > -5 && temp <= 5) {
+                result = "Leutoa";
+            } else if (temp > 5 && temp <= 15) {
+                result = "Kevättä";
+            } else if (temp > 15 && temp <= 25) {
+                result = "Lämmintä";
+            } else if (temp > 25 && temp <= 40) {
+                result = "Kuumaa";
+            }
+
+            document.getElementById('weatherResult').textContent = result;
+        }
+    </script>
+
+</body>
+
+</html>
+
+

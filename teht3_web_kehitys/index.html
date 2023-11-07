@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form action="#" method="post">
+    <fieldset>
+        <legend><strong>Registration form</strong></legend>
+        
+        <label><strong>Personal information</strong></label><br><br>
+        
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" name="firstname"><br><br>
+        
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="lastname"><br><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label>Sex</label><br>
+        <input type="radio" id="woman" name="sex" value="Woman">
+        <label for="woman">Woman</label><br>
+        
+        <input type="radio" id="man" name="sex" value="Man">
+        <label for="man">Man</label><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+        
+        <label><strong>Study information</strong></label><br><br>
+        
+        <label for="programme">Programme</label>
+        <select id="programme" name="programme">
+            <option value="Machine Learning">Machine Learning</option>
+        </select><br><br>
+        
+        <label><strong>Course selections spring 2022</strong></label><br>
+        
+        <input type="checkbox" id="industrialProject" name="course" value="Industrial Project">
+        <label for="industrialProject">Industrial Project</label><br>
+        
+        <input type="checkbox" id="webProgramming" name="course" value="Web Programming">
+        <label for="webProgramming">Web Programming</label><br>
+        
+        <input type="checkbox" id="iot" name="course" value="IOT">
+        <label for="iot">IOT</label><br><br>
+        
+        <label for="other">Other:</label><br>
+        <textarea id="other" name="other" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Send">
+    </fieldset>
+</form>
+
+</body>
+</html>

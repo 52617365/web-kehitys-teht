@@ -1,0 +1,106 @@
+#koulutusteksti {
+  background-color: grey
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+#links:visited {
+  color: red;
+}
+
+#red-text {
+  color: red;
+}
+
+#red-background {
+  background-color: #FFC0CB;
+}
+
+h1{
+    background-color: #FFC0CB;
+    color: #8B0000;
+    padding: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #555;
+    margin-top: 30px;
+}
+
+.activities, .courses, .images {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #f00;
+    font-weight: bold;
+}
+
+.cancelled {
+    color: #999;
+    text-decoration: line-through;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+#header-title {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#temperature-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#temperature-table td {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#temperature-table td:nth-child(odd) {
+    background-color: #E0E0E0;
+}
+
+#temperature-table td:nth-child(even) {
+    background-color: #FFFFFF;
+}

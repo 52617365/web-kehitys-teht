@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Styling Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 5px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing how to change the text and style of an element on the page</h1>
+    <p id="characterName">Mickey Mouse</p>
+    <button onclick="changeName()">Change name!</button>
+    <button onclick="changeColor()">Change color!</button>
+    <button onclick="resetName()">Back to original name</button>
+    <button onclick="resetColor()">Back to original color</button>
+    <button onclick="resetAll()">Back to original</button>
+
+    <script>
+        const characterName = document.getElementById('characterName');
+
+        function changeName() {
+            characterName.textContent = "Donald Duck";
+        }
+
+        function changeColor() {
+            characterName.style.backgroundColor = "red";
+        }
+
+        function resetName() {
+            characterName.textContent = "Mickey Mouse";
+        }
+
+        function resetColor() {
+            characterName.style.backgroundColor = "white";
+        }
+
+        function resetAll() {
+            resetName();
+            resetColor();
+        }
+    </script>
+</body>
+</html>

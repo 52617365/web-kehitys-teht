@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kilometrikorvaus Laskuri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kilometrikorvaus Laskuri</h1>
+
+        <label for="vehicle">Valitse ajoneuvo:</label>
+        <select id="vehicle">
+            <option value="auto">auto</option>
+            <option value="motorboat_under_50">moottorivene, enintään 50 hv</option>
+            <option value="motorboat_over_50">moottorivene, yli 50 hv</option>
+            <option value="snowmobile">moottorikelkka</option>
+            <option value="atv">mönkijä</option>
+            <option value="motorcycle">moottoripyörä</option>
+            <option value="moped">mopo</option>
+            <option value="other">muu kulkuneuvo</option>
+        </select>
+        <br>
+
+        <label for="passengers">Määrä matkustajia:</label>
+        <input type="number" id="passengers" name="passengers" required>
+        <br>
+
+        <label for="km">Matka kilometreinä:</label>
+        <input type="number" id="km" name="km" required>
+        <br>
+
+        <input type="submit" value="Laske" onclick="calculateCompensation();">
+        
+        <h2>Korvaus: <span id="result">0</span> snt</h2>
+    </div>
+
+    <script>
+        function calculateCompensation() {
+            const km = parseFloat(document.getElementById('km').value);
+            const vehicle = document.getElementById('vehicle').value;
+            const passengers = parseInt(document.getElementById('passengers').value);
+            let rate = 0;
+
+            switch(vehicle) {
+                case 'auto':
+                    rate = 53;
+                    break;
+                case 'motorboat_under_50':
+                    rate = 93;
+                    break;
+                case 'motorboat_over_50':
+                    rate = 135;
+                    break;
+                case 'snowmobile':
+                    rate = 129;
+                    break;
+                case 'atv':
+                    rate = 121;
+                    break;
+                case 'motorcycle':
+                    rate = 41;
+                    break;
+                case 'moped':
+                    rate = 22;
+                    break;
+                case 'other':
+                    rate = 13;
+                    break;
+            }
+
+            const passengerBonus = 4 * passengers;
+            const totalRate = rate + passengerBonus;
+            
+
+            
+            const compensation = km * totalRate;
+            document.getElementById('result').textContent = `${compensation}`;
+        }
+    </script>
+</body>
+</html>

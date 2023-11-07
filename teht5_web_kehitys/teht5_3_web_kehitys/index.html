@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+    <label>Temperature in Fahrenheit:</label>
+    <input type="number" id="fahrenheitInput" placeholder="Enter temperature in Fahrenheit">
+
+    <br></br>
+    <button onclick="convertToCelsius()">Convert to Celsius</button>
+
+    <p id="celsiusOutput"></p>
+
+    <script>
+        function convertToCelsius() {
+            const fahrenheit = parseFloat(document.getElementById("fahrenheitInput").value);
+            const celsius = (fahrenheit - 32) * (5 / 9);
+            document.getElementById("celsiusOutput").textContent = `Temperature in Celsius: ${celsius.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<style>
+.staff-section {
+    text-align: center; padding: 20px 0;
+}
+
+.staff-member {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.staff-member img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1450px) {
+    .staff-member {
+        width: 50%;
+        display: inline-block;
+    }
+}
+
+ .staff-section, .useful-links {
+     width: 100%;
+     text-align: center;
+     padding: 20px 0;
+ }
+
+.staff-member {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.staff-member img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.useful-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.useful-links a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 20px;
+}
+
+.useful-links a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1450px) {
+    .staff-member {
+        width: 25%;
+        display: inline-block;
+    }
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            background-color: #e0e0e0;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1450px;
+            margin: auto;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            float: left;
+            width: 20%;
+            padding: 20px;
+            background-color: #e0e0e0;
+            height: fit-content;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .sidebar li:hover {
+            background-color: #d1d1d1;
+        }
+
+        .main-content {
+            float: left;
+            width: 60%;
+            padding: 20px;
+        }
+
+        .main-image {
+            float: left;
+            width: 20%;
+            padding: 20px;
+        }
+
+        @media (max-width: 1450px) {
+            .sidebar, .main-content {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Company
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>Vision</li>
+                <li>About our company</li>
+                <li>Our staff</li>
+                <li>Our services</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Our vision</h2>
+            <p>We believe that we are on the face of the earth to make great products and that's not changing. 
+                We are constantly focusing on innovating. We believe in the simple not the complex. 
+                We believe that we need to own and control the primary technologies behind the products that we make,
+                and participate only in markets where we can make a significant contribution. 
+                We believe in saying no to thousands of projects, 
+                so that we can really focus on the few that are truly important and meaningful to us. 
+                We believe in deep collaboration and cross-pollination of our groups, which allow us to innovate in a way that others cannot. 
+                And frankly, we don't settle for anything less than excellence in every group in the company, and we have the self-honesty to 
+                admit when we're wrong and the courage to change. 
+                And I think regardless of who is in what job those values are so embedded in this company that Apple will do extremely well."- 
+                Tim Cook, CEO of Apple Computer</p>
+            <h2>About our company</h2>
+            <p>Our story begins in 1971 along the cobblestone streets of Seattle’s historic Pike Place Market. 
+                It was here where Starbucks opened its first store, offering fresh-roasted coffee beans, 
+                tea and spices from around the world for our customers to take home. Our name was inspired by the classic tale, 
+                “Moby-Dick,” evoking the seafaring tradition of the early coffee traders.<br/>
+
+                Ten years later, a young New Yorker named Howard Schultz would walk through these doors and become 
+                captivated with Starbucks coffee from his first sip. After joining the company in 1982, a different 
+                cobblestone road would lead him to another discovery. 
+                It was on a trip to Milan in 1983 that Howard first experienced Italy’s coffeehouses, and he returned to Seattle inspired to 
+                bring the warmth and artistry of its coffee culture to Starbucks. By 1987, we swapped our brown aprons for green ones 
+                and embarked on our next chapter as a coffeehouse.<br/>
+                
+                Starbucks would soon expand to Chicago and Vancouver, Canada and then on to California, 
+                Washington, D.C. and New York. By 1996, we would cross the Pacific to open our first store in Japan, 
+                followed by Europe in 1998 and China in 1999. Over the next two decades, we would grow to welcome 
+                millions of customers each week and become a part of the fabric of tens of thousands of neighborhoods 
+                all around the world. In everything we do, we are always dedicated to Our Mission: to inspire and nurture 
+                the human spirit – one person, one cup, and one neighborhood at a time.</p>
+        </div>
+    </div>
+
+    <div class="staff-section">
+        <h2>Our staff</h2>
+        <div class="staff-member">
+            <img src="staff_mike.jfif" alt="Mike">
+            <p>Mike</p>
+        </div>
+        <div class="staff-member">
+            <img src="staff_maria.jfif" alt="Maria">
+            <p>Maria</p>
+        </div>
+        <div class="staff-member">
+            <img src="staff_pasi.jfif" alt="Pasi">
+            <p>Pasi</p>
+        </div>
+        <div class="staff-member">
+            <img src="staff_wilson.jfif" alt="Wilson">
+            <p>Wilson</p>
+        </div>
+    </div>
+
+    <div class="useful-links">
+        <h2>Some useful links</h2>
+        <ul>
+            <li><a href="lapinamk.fi">Lapin amk</a></li>
+            <li><a href="rovaniemi.fi">Rovaniemi city</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

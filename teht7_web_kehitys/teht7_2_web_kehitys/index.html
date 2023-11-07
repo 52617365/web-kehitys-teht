@@ -1,0 +1,90 @@
+<html>
+<head>
+    <script src="students_data.js"></script>
+</head>
+<body>
+
+
+
+<label><input type="radio" name="genderFilter" value="all" checked> All</label>
+<label><input type="radio" name="genderFilter" value="male"> Men</label>
+<label><input type="radio" name="genderFilter" value="female"> Women</label>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Study Field</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Age</th>
+    </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+
+<script src="students_data.js"></script>
+<script>
+    const tableBody = document.getElementById("tableBody");
+
+
+    function populateTable(data) {
+        tableBody.innerHTML = "";
+        data.forEach(student => {
+            const row = tableBody.insertRow();
+
+            const cellID = row.insertCell(0);
+            cellID.textContent = student.student_id;
+
+            const cellFirstName = row.insertCell(1);
+            cellFirstName.textContent = student.firstname;
+
+            const cellLastName = row.insertCell(2);
+            cellLastName.textContent = student.lastname;
+
+            const cellGender = row.insertCell(3);
+            cellGender.textContent = student.gender;
+
+            const cellStudyField = row.insertCell(4);
+            cellStudyField.textContent = student.study_field;
+
+            const cellAddress = row.insertCell(5);
+            cellAddress.textContent = student.address;
+
+            const cellEmail = row.insertCell(6);
+            cellEmail.textContent = student.email;
+
+            const cellPhone = row.insertCell(7);
+            cellPhone.textContent = student.phone;
+
+            const cellAge = row.insertCell(8);
+            cellAge.textContent = student.age;
+        });
+    }
+
+    populateTable(students);
+
+    document.querySelectorAll('input[name="genderFilter"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            let filteredData;
+
+            if (this.value === "male") {
+                filteredData = students.filter(student => student.gender === "male");
+            } else if (this.value === "female") {
+                filteredData = students.filter(student => student.gender === "female");
+            } else {
+                filteredData = students;
+            }
+
+            populateTable(filteredData);
+        });
+    });
+</script>
+
+</body>
+</html>
